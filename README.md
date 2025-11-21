@@ -18,13 +18,13 @@ Sebuah kalkulator web multifungsi yang mengombinasikan fungsi kalkulator scienti
    * Jarak Peta (Jp): Menggunakan rumus Jp = Js / S.
    * Skala (S): Menggunakan rumus S = Js / Jp (dalam satuan 1:X).
  * Konversi Unit Otomatis: Mendukung satuan cm, dm, m, dan km untuk input dan target hasil. Semua perhitungan internal dikonversi ke cm untuk konsistensi.
-#🛠️ Teknologi yang Digunakan
+# 🛠️ Teknologi yang Digunakan
  * HTML5: Struktur dasar halaman.
  * CSS3: Styling dengan tema Pastel Pink yang elegan (style.css). Menggunakan Flexbox dan Grid untuk tata letak tombol.
  * JavaScript (Vanilla JS): Logika utama kalkulator untuk scientific, DMS, dan skala (script.js).
 
    
-#🚀 Cara Menggunakan
+# 🚀 Cara Menggunakan
   • Clone repositori ini:
    https://github.com/Flawedmangoes/Kalkulator-Scientific
 
