@@ -1,0 +1,337 @@
+/* Font dan Variabel Warna Pastel Pink */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --pastel-pink-light: #ffc0cb; /* Baby Pink / Aksen */
+    --pastel-pink-dark: #e996b2;  /* Dusty Rose / Tombol Op */
+    --background-color: #f7e9f1;  /* Latar Belakang Pucat */
+    --white: #ffffff;
+    --border-color: #d4a9bf;
+    --text-color: #4a4a4a;
+    --font-primary: 'Playfair Display', serif; 
+    --font-secondary: 'Crimson Text', serif; 
+    /* Variabel untuk efek hover */
+    --hover-filter: brightness(0.95);
+    --hover-op: #d487a2;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: var(--white);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+}
+
+.calc-header h1 {
+    font-family: var(--font-primary);
+    color: var(--pastel-pink-dark);
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    color: var(--pastel-pink-dark);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px 0;
+}
+
+/* --- Scientific Display --- */
+.display {
+    background-color: #fff0f5; 
+    border: 2px solid var(--pastel-pink-light);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.history {
+    font-size: 0.9em;
+    color: #888;
+    text-align: right;
+}
+
+.main-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: right;
+    font-size: 2.2em;
+    color: var(--text-color);
+    outline: none;
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+/* --- Buttons Scientific --- */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px 0;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.1s; /* Menambahkan box-shadow transition */
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+/* Efek Hover Dasar untuk Semua Tombol .btn */
+.btn:hover {
+    filter: var(--hover-filter);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+    transform: scale(0.98); /* Sedikit efek klik */
+}
+
+
+/* Numerik dan Titik */
+.num, .dot {
+    background-color: #fce8ee; 
+    color: var(--text-color);
+}
+
+/* Operator (+, -, *, /) */
+.op {
+    background-color: var(--pastel-pink-dark);
+    color: var(--white);
+}
+
+.op:hover {
+    background-color: var(--hover-op); /* Gaya hover yang lebih spesifik */
+    filter: none;
+}
+
+/* Fungsi (sin, cos, log, etc.) */
+.func {
+    background-color: var(--pastel-pink-light);
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+/* Clear/Delete (AC, DEL) */
+.clear {
+    background-color: #ffe0e9; 
+    color: var(--pastel-pink-dark);
+}
+
+/* Tombol Sama Dengan */
+.equals {
+    background-color: #ff69b4; /* Pink Lebih Terang */
+    color: var(--white);
+    font-size: 1.3em;
+}
+
+.equals:hover {
+    background-color: #ff5c9f; /* Sedikit lebih gelap saat di-hover */
+    filter: none;
+}
+
+/* --- DMS Section --- */
+.angle-input-section {
+    margin-top: 25px; 
+    padding: 15px; 
+    border-top: 1px dashed var(--border-color); 
+    text-align: center; 
+}
+.angle-title { 
+    color: var(--pastel-pink-dark); 
+    margin-bottom: 10px; 
+}
+.dms-input-group { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5px; 
+}
+.dms-input-group input { 
+    width: 50px; 
+    padding: 5px; 
+    text-align: center; 
+    border: 1px solid var(--border-color); 
+    border-radius: 5px; 
+    background-color: #fff8f8; 
+}
+.plus-sign { 
+    font-size: 1.2em; 
+    color: var(--pastel-pink-dark); 
+    margin: 0 5px; 
+}
+
+/* PERBAIKAN 1: Menambahkan properti tombol dasar ke .dms-calc */
+.dms-calc { 
+    background-color: var(--pastel-pink-light); 
+    color: var(--text-color); 
+    padding: 10px 15px; 
+    font-size: 1em; 
+    margin-top: 15px; 
+    width: 100%; 
+    
+    /* Properti tombol yang ditambahkan */
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.1s, transform 0.1s;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.dms-calc:hover {
+    filter: var(--hover-filter);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.dms-calc:active {
+    transform: scale(0.99); 
+}
+
+.dms-result { 
+    margin-top: 10px; 
+    font-weight: 600; 
+    color: var(--pastel-pink-dark); 
+}
+
+/* --- Scale Calculator Styles --- */
+
+.mode-selector {
+    text-align: center; 
+    padding: 15px; 
+    background-color: #fff0f5; 
+    border-radius: 10px; 
+    border: 1px dashed var(--pastel-pink-dark); 
+    margin-bottom: 20px;
+}
+.mode-selector label { 
+    font-weight: 600; 
+    margin-right: 10px; 
+    color: var(--pastel-pink-dark); 
+}
+.mode-selector select { 
+    padding: 8px; 
+    border-radius: 5px; 
+    border: 1px solid var(--pastel-pink-light); 
+    background-color: var(--white); 
+}
+
+.scale-form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    padding: 20px; 
+    border: 2px solid var(--pastel-pink-dark); 
+    border-radius: 15px; 
+    background-color: #ffeff3;
+}
+.input-group label { 
+    font-weight: 600; 
+    margin-bottom: 5px; 
+    color: var(--text-color); 
+}
+.input-fields { 
+    display: flex; 
+    gap: 10px; 
+}
+.input-fields input[type="number"], .input-fields select { 
+    padding: 8px; 
+    border-radius: 5px; 
+    border: 1px solid var(--border-color); 
+    background-color: var(--white); 
+    flex-grow: 1;
+}
+
+.calculate-btn { 
+    padding: 12px; 
+    background-color: #ff69b4; 
+    color: var(--white); 
+    font-size: 1.1em; 
+    margin-top: 10px; 
+    border-radius: 10px;
+    
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.2s, box-shadow 0.1s, transform 0.1s;
+    font-weight: 600;
+}
+
+.calculate-btn:hover {
+    background-color: #ff5c9f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.calculate-btn:active {
+    transform: scale(0.99); 
+}
+
+
+.scale-result-box {
+    margin-top: 20px; 
+    padding: 15px; 
+    border: 2px solid #ff007f; 
+    border-radius: 15px; 
+    background-color: #fffafe; 
+    text-align: center;
+}
+.scale-result-box .result-title { 
+    color: #cc0066; 
+    font-family: var(--font-primary); 
+    font-size: 1.5em; 
+}
+.scale-result-box .result-content strong { 
+    color: #ff007f; 
+}
+
+/* Guide Satuan */
+.conversion-guide {
+    margin-top: 25px; 
+    padding: 15px; 
+    background-color: #ffe0e9; 
+    border-radius: 10px; 
+    border: 1px solid var(--border-color);
+}
+.conversion-guide h3 { 
+    color: var(--pastel-pink-dark); 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+.conversion-guide table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+.conversion-guide th, .conversion-guide td { 
+    padding: 8px; 
+    text-align: center; 
+    border: 1px solid var(--border-color); 
+}
+.conversion-guide th { 
+    background-color: var(--pastel-pink-light); 
+    color: var(--text-color); 
+}
+

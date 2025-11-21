@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Scientific dan Skala</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <header class="calc-header">
+            <h1>Kalkulator Scientific dan Skala</h1>
+        </header>
+        
+        <h2 class="section-title">Kalkulator Scientific</h2>
+        <div class="scientific-section">
+            <div class="display">
+                <div id="history-display" class="history"></div>
+                <input type="text" id="main-display" class="main-input" value="0" readonly>
+            </div>
+
+            <div class="buttons">
+                <button class="btn func" data-op="sin">sin</button>
+                <button class="btn func" data-op="cos">cos</button>
+                <button class="btn func" data-op="tan">tan</button>
+                <button class="btn func" data-op="log">log</button>
+                <button class="btn func" data-op="sqrt">√</button>
+
+                <button class="btn clear" data-action="clear">AC</button>
+                <button class="btn clear" data-action="backspace">DEL</button>
+                <button class="btn func" data-op="exp">^</button>
+                <button class="btn func" data-op="(">(</button>
+                <button class="btn func" data-op=")">)</button>
+
+                <button class="btn func" data-op="pi">π</button>
+                <button class="btn num">7</button>
+                <button class="btn num">8</button>
+                <button class="btn num">9</button>
+                <button class="btn op" data-op="/">/</button>
+
+                <button class="btn func" data-op="e">e</button>
+                <button class="btn num">4</button>
+                <button class="btn num">5</button>
+                <button class="btn num">6</button>
+                <button class="btn op" data-op="*">*</button>
+
+                <button class="btn func" data-op="fact">x!</button>
+                <button class="btn num">1</button>
+                <button class="btn num">2</button>
+                <button class="btn num">3</button>
+                <button class="btn op" data-op="-">-</button>
+
+                <button class="btn func" data-op="rad">Rad</button>
+                <button class="btn num zero">0</button>
+                <button class="btn num dot">.</button>
+                <button class="btn equals op">=</button>
+                <button class="btn op" data-op="+">+</button>
+            </div>
+        </div>
+
+        <div class="angle-input-section">
+            <h3 class="angle-title">Penjumlahan Sudut (DMS)</h3>
+            <div class="dms-input-group">
+                <input type="number" id="deg1" placeholder="D°" min="0">
+                <input type="number" id="min1" placeholder="M'" min="0" max="59">
+                <input type="number" id="sec1" placeholder="S''" min="0" max="59.99">
+                <span class="plus-sign">+</span>
+                <input type="number" id="deg2" placeholder="D°" min="0">
+                <input type="number" id="min2" placeholder="M'" min="0" max="59">
+                <input type="number" id="sec2" placeholder="S''" min="0" max="59.99">
+            </div>
+            <button class="btn dms-calc" id="calculate-dms">Jumlahkan Sudut</button>
+            <div id="dms-result" class="dms-result">Hasil: 0° 0' 0''</div>
+        </div>
+        
+        
+        <hr class="divider">
+
+
+        <h2 class="section-title">Kalkulator Skala</h2>
+
+        <div class="mode-selector">
+            <label for="scale-mode">Pilih yang dicari:</label>
+            <select id="scale-mode" onchange="changeScaleMode()">
+                <option value="findJs">1. Jarak Sebenarnya (Js)</option>
+                <option value="findJp">2. Jarak Peta (Jp)</option>
+                <option value="findSkala">3. Skala (S)</option>
+            </select>
+        </div>
+
+        <form id="scale-calculator-form" class="calculator-form scale-form">
+            </form>
+
+        <div class="result-box scale-result-box">
+            <h3 class="result-title">Hasil Perhitungan Skala</h3>
+            <div id="scale-calculation-result" class="result-content">
+                <p>Silakan isi data.</p>
+            </div>
+        </div>
+        
+        <div class="conversion-guide">
+            <h3>Panduan Satuan (Konversi ke cm)</h3>
+            <table>
+                <tr><th>Satuan</th><th>Faktor Konversi</th></tr>
+                <tr><td>km</td><td>× 100.000</td></tr>
+                <tr><td>m</td><td>× 100</td></tr>
+                <tr><td>dm</td><td>× 10</td></tr>
+                <tr><td>cm</td><td>× 1</td></tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
