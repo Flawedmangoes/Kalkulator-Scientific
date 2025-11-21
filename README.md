@@ -26,7 +26,7 @@ Sebuah kalkulator web multifungsi yang mengombinasikan fungsi kalkulator scienti
    
 # 🚀 Cara Menggunakan
   • Clone repositori ini:
-   https://github.com/Flawedmangoes/Kalkulator-Scientific
+   git clone https://github.com/Flawedmangoes/Kalkulator-Scientific
 
   • Buka file kalkukator.html di browser web favorit Anda.
   • Pilih mode kalkulator yang ingin Anda gunakan (Scientific, DMS, atau Skala).
